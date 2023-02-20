@@ -1,8 +1,9 @@
 import './POPOSSpace.css';
+import POPOSFeature from '../POPOSFeature/POPOSFeature'
 import { Link } from 'react-router-dom'
 
 function POPOSSpace(props) {
-  const { name, address, image, hours, id } = props;
+  const { name, address, image, hours, features, id } = props;
   return (
     <div className='POPOSSpace'>
       <Link to={`/details/${id}`}>
@@ -19,6 +20,13 @@ function POPOSSpace(props) {
         <div>{address}</div>
         <div className="hours">
           {hours ? `🕒 ${hours}` : 'Hours not available.' }
+        </div>
+        <div className="features">
+          { features.map((feature) => {
+            return (
+              <POPOSFeature feature={feature} />
+            )
+          })}
         </div>
       </div>
     </div>

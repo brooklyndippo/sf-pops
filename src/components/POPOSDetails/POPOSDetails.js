@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router'
 import data from '../../sfpopos-data.js'
+import POPOSFeature from '../POPOSFeature/POPOSFeature.js'
 
 import './POPOSDetails.css'
 
@@ -22,7 +23,7 @@ function POPOSDetails(props) {
           <p>Features:</p>
           <ul>
             { features.map ((feature) => {
-                return(<li>{ feature }</li>)
+                return(<li><POPOSFeature feature={feature} showText={true}/></li>)
             })}
           </ul>
           <hr/>

@@ -13,7 +13,7 @@ function POPOSList() {
     // return true if either is true
     return inTitle || inAddress
   })
-  .map(({ title, address, images, hours, id }) => {        
+  .map(({ title, address, images, hours, features, id }) => {        
     return (
           <POPOSSpace
             id={id}
@@ -22,6 +22,7 @@ function POPOSList() {
             address={address}
             image={images[0]}
             hours={hours}
+            features={features}
           />
         )
     });

@@ -6,3 +6,30 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+
+
+form input, .POPOSList form button {
+  padding: 1em;
+  margin: 0;
+  font-size: 1rem;
+}
+
+form input {
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+form input:focus {
+  outline: darkolivegreen;
+}
+
+form button {
+  padding: 1em;
+  margin: 0;
+  font-size: 1rem;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  background-color: rgb(7, 52, 11);
+  color: white;
+}

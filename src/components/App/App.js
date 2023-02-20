@@ -1,9 +1,8 @@
 import './App.css';
-import Footer from './Footer';
+import Footer from '../Footer/Footer';
 import { Outlet } from 'react-router-dom'
 
-import POPOSList from './POPOSList';
-import Title from './Title';
+import Title from '../Title/Title';
 
 function App() {
   return (

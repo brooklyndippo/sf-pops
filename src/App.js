@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './Footer';
 
 import POPOSList from './POPOSList';
 import Title from './Title';
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Title />
       <POPOSList />
+      <Footer />
     </div>
   );
 }

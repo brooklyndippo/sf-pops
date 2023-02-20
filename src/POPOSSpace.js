@@ -1,9 +1,9 @@
-import logo from './logo.svg'
+import './POPOSSpace.css';
 
 function POPOSSpace(props) {
   const { name, address, image } = props;
   return (
-    <div>
+    <div className='POPOSSpace'>
       <img src={`${process.env.PUBLIC_URL}/images/${image}`}     
         width="300"
         height="300"

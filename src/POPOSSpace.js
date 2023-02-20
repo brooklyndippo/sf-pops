@@ -1,7 +1,7 @@
 import './POPOSSpace.css';
 
 function POPOSSpace(props) {
-  const { name, address, image } = props;
+  const { name, address, image, hours } = props;
   return (
     <div className='POPOSSpace'>
       <img src={`${process.env.PUBLIC_URL}/images/${image}`}     
@@ -11,6 +11,9 @@ function POPOSSpace(props) {
       />
       <h1>{name}</h1>
       <div>{address}</div>
+      <div className="hours">
+        {hours ? `🕒 ${hours}` : 'Hours not available.' }
+      </div>
     </div>
   )
 }

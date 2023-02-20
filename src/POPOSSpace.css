@@ -10,6 +10,7 @@
     background-color: whitesmoke;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 .POPOSSpace > h1 {
@@ -21,4 +22,10 @@
     height: 50%;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.hours {
+    color: gray;
+    position: absolute;
+    bottom: 20px;
 }

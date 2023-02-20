@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sf-pops/static/css/main.d2a6463a.css",
+    "main.js": "/sf-pops/static/js/main.ac801014.js",
+    "static/js/787.1d0a1e66.chunk.js": "/sf-pops/static/js/787.1d0a1e66.chunk.js",
+    "index.html": "/sf-pops/index.html",
+    "main.d2a6463a.css.map": "/sf-pops/static/css/main.d2a6463a.css.map",
+    "main.ac801014.js.map": "/sf-pops/static/js/main.ac801014.js.map",
+    "787.1d0a1e66.chunk.js.map": "/sf-pops/static/js/787.1d0a1e66.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2a6463a.css",
+    "static/js/main.ac801014.js"
+  ]
+}

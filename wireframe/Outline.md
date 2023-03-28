@@ -1,0 +1,26 @@
+- SFPOPOS
+  - Home
+    - Header
+      - Page Title: SFPOPOS
+      - Sub title: San Francisco Privately Owned Public Open Spaces
+    - Nav
+      - NavLink: Home
+      - NavLink: About
+    - Index
+      - Search Bar
+      - POPOS Space Cards
+        - Image
+        - Space Name
+        - Address
+        - Hours of Operation
+        - Amenity Icons
+    - POPOS Space Details
+        - Image
+        - Space Name
+        - Space Description
+        - Amenity Icons & Descriptions
+        - Hours of Operation
+        - Address 
+        - Map
+    - Footer
+      - Copyright 2023 SFPOPOS

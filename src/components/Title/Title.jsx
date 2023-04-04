@@ -1,11 +1,12 @@
 // src/Title.js
 import React from 'react';
 import './Title.css';
+import '../../index.css';
 import { NavLink } from 'react-router-dom';
 
 export default function Title() {
   return (
-    <div className="Title">
+    <div className="text-xl bg-purple-50">
       <h1>SFPOPOS</h1>
       <div className="Title-Subtitle">San Franciscos Privately Owned Public Spaces</div>
 
@@ -16,5 +17,3 @@ export default function Title() {
     </div>
   );
 }
-
-// src/Title.js

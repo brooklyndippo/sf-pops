@@ -1,13 +1,11 @@
 import React from 'react';
-//import ReactDOM from 'react-dom/client';
-import { createRoot } from 'react-dom/client'
+// import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import './index.css';
-import App from './components/App/App';
-import POPOSList from './components/POPOSList/POPOSList';
-import POPOSDetails from './components/POPOSDetails/POPOSDetails';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { App, POPOSDetails, POPOSList } from './components';
 import About from './components/About/About';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -22,7 +20,7 @@ root.render(
       </Route>
     </Routes>
   </Router>,
-  //document.getElementById('root')
+  // document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,7 +1,9 @@
-import data from './sfpopos-data.json'
+/* eslint-disable no-param-reassign */
+
+import data from './sfpopos-data.json';
 
 data.forEach((obj, i) => {
-	obj.id = i
-})
+  obj.id = i;
+});
 
-export default data
+export default data;

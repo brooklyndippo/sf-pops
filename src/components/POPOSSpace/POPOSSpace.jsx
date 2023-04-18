@@ -9,24 +9,23 @@ function POPOSSpace(props) {
     name, address, image, hours, features, id,
   } = props;
   return (
-    <div className="POPOSSpace">
+    <div className="border border-gray-200 shadow-md w-[340px] rounded-lg flex flex-col">
       <Link to={`/details/${id}`}>
         <img
           src={`${process.env.PUBLIC_URL}/images/${image}`}
-          width="300"
-          height="300"
+          className="object-cover h-48 w-full rounded-t-lg"
           alt={name}
         />
       </Link>
-      <div className="card-details">
+      <div className="p-6 flex flex-col gap-4">
         <Link to={`/details/${id}`}>
-          <h1>{name}</h1>
+          <h2 className="font-bold text-xl">{name}</h2>
         </Link>
-        <div>{address}</div>
+        <h3 className="font-semibold">{address}</h3>
         <div className="hours">
           {hours ? `🕒 ${hours}` : 'Hours not available.' }
         </div>
-        <div className="features">
+        <div className="flex gap-3">
           { features.map((feature) => (
             <POPOSFeature key={feature} feature={feature} />
           ))}

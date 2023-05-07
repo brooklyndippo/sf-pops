@@ -5,14 +5,15 @@ import data from '../../sfpopos-data';
 
 function POPOSList() {
   const [query, setQuery] = useState('');
-  const spaces = data.filter((obj) => {
-    // true if query is in title
-    const inTitle = obj.title.toLowerCase().includes(query.toLowerCase());
-    // true if query is in address
-    const inAddress = obj.address.toLowerCase().includes(query.toLowerCase());
-    // return true if either is true
-    return inTitle || inAddress;
-  })
+  const spaces = data
+    .filter((obj) => {
+      // true if query is in title
+      const inTitle = obj.title.toLowerCase().includes(query.toLowerCase());
+      // true if query is in address
+      const inAddress = obj.address.toLowerCase().includes(query.toLowerCase());
+      // return true if either is true
+      return inTitle || inAddress;
+    })
     .map(({
       title, address, images, hours, features, id,
     }) => (
@@ -49,8 +50,8 @@ function POPOSList() {
         />
         {/* <button className="bg-gray-100 rounded p-1" type="submit">Search</button> */}
       </form>
-      <div className="flex flex-col items-center md:items-stretch md:justify-evenly md:flex-row md:flex-wrap w-full gap-12">
-        { spaces }
+      <div className="grid grid-cols-1 min-[500px]:grid-cols-2 min-[800px]:grid-cols-3 min-[1100px]:grid-cols-4 gap-8 min-[800px]:gap-10">
+        {spaces}
       </div>
     </div>
   );

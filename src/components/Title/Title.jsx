@@ -13,7 +13,7 @@ export default function Title() {
   }
 
   return (
-    <div className="h-12 px-6 py-2 flex flex-row justify-between">
+    <div className="h-12 px-6 py-2 my-2 flex flex-row justify-between">
       {/* hamburger menu button */}
       <button id="hamburger-menu" type="button" onClick={handleClick} className="md:hidden">
         {showMobileMenu ? (
@@ -31,7 +31,7 @@ export default function Title() {
       </button>
       <div
         id="logo"
-        className="flex items-center text-lg font-bold min-w-fit px-2 text-white bg-gray-400 rounded-lg"
+        className="hidden md:flex items-center text-lg font-bold min-w-fit px-2 text-white bg-gray-400 rounded-lg"
       >
         SF POPOS
       </div>
@@ -60,7 +60,7 @@ export default function Title() {
       {showMobileMenu && (
         <div
           id="mobile-menu"
-          className="flex flex-col gap-10 lg:hidden bg-black/[.9] text-white absolute w-full h-[80%] z-10 pl-8 py-10 top-12 left-0 font-semibold text-lg"
+          className="flex flex-col gap-10 lg:hidden bg-black/[.9] text-white absolute w-full h-[80%] z-10 pl-8 py-10 top-16 left-0 font-semibold text-lg"
         >
           <NavLink
             onClick={handleClick}

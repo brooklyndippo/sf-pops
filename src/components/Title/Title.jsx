@@ -60,7 +60,7 @@ export default function Title() {
       {showMobileMenu && (
         <div
           id="mobile-menu"
-          className="flex flex-col gap-10 lg:hidden bg-black/[.9] text-white absolute w-full h-[80%] z-10 pl-8 py-10 top-16 left-0 font-semibold text-lg"
+          className="flex flex-col gap-10 lg:hidden bg-black/[.9] text-white absolute w-full h-[600px] z-10 pl-8 py-10 top-12 left-0 font-semibold text-lg"
         >
           <NavLink
             onClick={handleClick}

@@ -13,7 +13,7 @@ export default function Title() {
   }
 
   return (
-    <div className="h-12 px-6 py-2 my-2 flex flex-row justify-between">
+    <div className="h-12 px-6 py-2 my-2 flex flex-row justify-between sticky top-0 bg-white z-30">
       {/* hamburger menu button */}
       <button id="hamburger-menu" type="button" onClick={handleClick} className="md:hidden">
         {showMobileMenu ? (
@@ -31,7 +31,7 @@ export default function Title() {
       </button>
       <div
         id="logo"
-        className="hidden md:flex items-center text-lg font-bold min-w-fit px-2 text-white bg-gray-400 rounded-lg"
+        className="hidden md:flex items-center text-lg font-bold min-w-fit px-2 bg-[#d3e1d6]"
       >
         SF POPOS
       </div>

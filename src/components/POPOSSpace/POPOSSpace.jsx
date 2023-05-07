@@ -9,11 +9,11 @@ function POPOSSpace(props) {
     name, address, image, hours, features, id,
   } = props;
   return (
-    <div className="border border-gray-200 shadow-md w-full rounded-lg flex flex-col">
+    <div className="border border-gray-200 shadow-md w-full rounded-lg flex flex-col min-[800px]:flex-row min-[800px]:max-h-60">
       <Link to={`/details/${id}`}>
         <img
           src={`${process.env.PUBLIC_URL}/images/${image}`}
-          className="object-cover h-48 w-full rounded-t-lg"
+          className="object-cover h-48 w-full rounded-t-lg min-[800px]:rounded-t-none min-[800px]:rounded-tl-lg min-[800px]:rounded-bl-lg min-[800px]:h-full min-[800px]:max-w-56"
           alt={name}
         />
       </Link>

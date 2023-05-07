@@ -41,7 +41,7 @@ function POPOSList() {
 
   return (
     <div>
-      <div id="hero" className="relative mb-52 md:mb-10 md:flex md:flex-row-reverse gap-10">
+      <div id="hero" className="relative mb-52 md:flex md:flex-row-reverse gap-10 md:my-12">
         <img
           src={`${process.env.PUBLIC_URL}/images/555-california.jpg`}
           className="object-cover w-[80%] ml-auto max-h-[450px] md:w-full"
@@ -54,7 +54,7 @@ function POPOSList() {
         </div>
       </div>
       <div className="block md:hidden">{searchBar}</div>
-      <div className="grid grid-cols-1 min-[500px]:grid-cols-2 min-[800px]:grid-cols-3 min-[1100px]:grid-cols-4 gap-8 min-[800px]:gap-10">
+      <div className="grid grid-cols-1 min-[500px]:grid-cols-2 min-[800px]:grid-cols-1 gap-8 min-[800px]:gap-10">
         {spaces}
       </div>
     </div>

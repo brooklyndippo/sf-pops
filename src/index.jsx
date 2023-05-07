@@ -7,6 +7,7 @@ import { App, POPOSDetails, POPOSList } from './components';
 import About from './components/About/About';
 import reportWebVitals from './reportWebVitals';
 
+// eslint-disable-next-line no-undef
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 

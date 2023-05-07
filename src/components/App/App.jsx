@@ -6,9 +6,9 @@ import Title from '../Title/Title';
 
 export default function App() {
   return (
-    <div>
+    <div className="max-w-[1200px] m-auto">
       <Title />
-      <div id="page-content" className="px-6">
+      <div id="page-content" className="px-6 z-10">
         <Outlet />
       </div>
       <Footer />

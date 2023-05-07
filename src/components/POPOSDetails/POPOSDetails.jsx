@@ -35,19 +35,25 @@ function POPOSDetails() {
   return (
     <div className="POPOSFrame">
       <div className="POPOSDetails">
-        <div id="space-hero" className="relative mb-32 md:flex md:flex-row-reverse gap-10 md:my-12">
+        <div
+          id="space-hero"
+          className="relative mb-32 md:flex md:flex-row-reverse gap-10 md:my-12 md:justify-between"
+        >
           <img
             src={`${process.env.PUBLIC_URL}/images/${images[0]}`}
-            className="object-cover w-[90%] mr-auto max-h-[350px]"
+            className="object-cover w-[90%] mr-auto max-h-[350px] md:max-w-[450px] md:mr-0"
             alt={title}
           />
-          <h1 className="bg-white max-w-[400px] h-fit absolute right-0 md:relative text-4xl text-center -my-8 md:my-6 font-black border-[2px] border-black p-4 w-full md:text-left md:p-0 md:pt-20 md:border-l-0 md:border-r-0 md:border-t-0 md:w-fit md:pr-16 md:pb-8 md:border-gray-300 md:border-4">
-            {title}
-          </h1>
+          <div className="max-w-[400px] h-fit absolute right-0 md:relative md:grow">
+            <h1 className="bg-white text-4xl text-center -my-8 md:my-6 font-black border-[2px] border-black p-4 w-full md:text-left md:p-0 md:pt-20 md:border-l-0 md:border-r-0 md:border-t-0 md:w-fit md:pr-16 md:pb-8 md:border-gray-300 md:border-4">
+              {title}
+            </h1>
+            <div className="hidden md:block">{featuresList}</div>
+          </div>
         </div>
         <div className="flex flex-col gap-8">
           <p>{desc}</p>
-          {featuresList}
+          <div className="md:hidden">{featuresList}</div>
           <div className="border mb-10 flex flex-col md:flex-row">
             <div className="w-full md:w-80 h-48 md:h-60 bg-gray-100">{map}</div>
             <div id="location-details" className="p-10 flex flex-col gap-4 justify-around">

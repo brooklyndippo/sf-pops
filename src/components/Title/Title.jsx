@@ -56,7 +56,6 @@ export default function Title() {
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? 'nav-link-active' : 'nav-link')}
-          to="/"
           onClick={handleSubscribeClick}
         >
           Subscribe
@@ -83,9 +82,11 @@ export default function Title() {
             About
           </NavLink>
           <NavLink
-            onClick={handleSubscribeClick}
+            onClick={() => {
+              handleSubscribeClick();
+              handleClick();
+            }}
             className={({ isActive }) => (isActive ? 'nav-link-active' : 'nav-link')}
-            to="/"
           >
             Subscribe
           </NavLink>

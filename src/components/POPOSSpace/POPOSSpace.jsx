@@ -17,7 +17,7 @@ function POPOSSpace(props) {
           alt={name}
         />
       </Link>
-      <div className="p-6 flex flex-col gap-4">
+      <div className="grow p-6 flex flex-col justify-end gap-4">
         <Link to={`/details/${id}`}>
           <h2 className="font-bold text-xl">{name}</h2>
         </Link>
@@ -28,6 +28,11 @@ function POPOSSpace(props) {
             <POPOSFeature key={feature} feature={feature} />
           ))}
         </div>
+        <Link to={`/details/${id}`} className="grow flex items-end min-[800px]:ml-auto">
+          <span className="bg-[#303030] hover:bg-black p-2 px-6 w-full flex items-center text-white justify-center md:justify-end font-bold rounded md:w-fit">
+            View Space
+          </span>
+        </Link>
       </div>
     </div>
   );

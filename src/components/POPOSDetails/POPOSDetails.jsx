@@ -26,7 +26,7 @@ function POPOSDetails() {
 
   const map = (
     <img
-      alt="A map showing the location in San Francisco"
+      alt={`A map showing the location of ${title} in San Francisco`}
       src={`https://maps.googleapis.com/maps/api/staticmap?center=${geo.lat},${geo.lon}&zoom=16&size=600x400&markers=${geo.lat},${geo.lon}&key=API_KEY`}
       className="object-cover w-full h-full"
     />
@@ -42,7 +42,7 @@ function POPOSDetails() {
           <img
             src={`${process.env.PUBLIC_URL}/images/${images[0]}`}
             className="object-cover w-[90%] mr-auto max-h-[350px] md:max-w-[450px] md:mr-0"
-            alt={title}
+            alt={`Snapshot from ${title}, a privately owned public space in San Francisco`}
           />
           <div className="max-w-[400px] h-fit absolute right-0 md:relative md:grow">
             <h1 className="bg-white text-4xl text-center -my-8 md:my-6 font-black border-[2px] border-black p-4 w-full md:text-left md:p-0 md:pt-20 md:border-l-0 md:border-r-0 md:border-t-0 md:w-fit md:pr-16 md:pb-8 md:border-gray-300 md:border-4">

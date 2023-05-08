@@ -45,7 +45,7 @@ function POPOSList() {
         <img
           src={`${process.env.PUBLIC_URL}/images/555-california.jpg`}
           className="object-cover w-[80%] ml-auto max-h-[450px] md:w-full"
-          alt="Embarcadero Center"
+          alt="Embarcadero Center - wooden benches placed around box gardens in a city center."
         />
         <div className="bg-[#CCD9CF] max-w-[400px] absolute md:relative -mt-8 md:mt-0 w-5/6 p-6 md:p-0 md:bg-transparent flex flex-col justify-center md:min-h-full gap-4">
           <h1 className="text-4xl font-black">SF POPOS</h1>

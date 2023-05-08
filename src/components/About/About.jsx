@@ -48,17 +48,17 @@ export default function About() {
           <img
             src={`${process.env.PUBLIC_URL}/images/garden-terrace-at-150-california.jpg`}
             className="object-cover w-full"
-            alt="Garden terrance at 150 California"
+            alt="Young professionals sitting outside and working at a rooftop garden"
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/525-market-street-plaza.jpg`}
             className="object-cover w-full"
-            alt="525 Market Street Plaza"
+            alt="A large bright space with clear glass roofs, fountains, palm trees, and seating areas."
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/101-california.jpg`}
             className="object-cover w-full"
-            alt="101 California"
+            alt="People mingling and relaxing on benches in a garden area"
           />
         </div>
       </article>

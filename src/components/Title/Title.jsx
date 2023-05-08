@@ -2,14 +2,19 @@
 // src/Title.js
 import React, { useState } from 'react';
 import './Title.css';
-import '../../index.css';
 import { NavLink } from 'react-router-dom';
+import '../../index.css';
 
 export default function Title() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showSubscribe, setShowSubscribe] = useState(false);
 
   function handleClick() {
     setShowMobileMenu(!showMobileMenu);
+  }
+
+  function handleSubscribeClick() {
+    setShowSubscribe(!showSubscribe);
   }
 
   return (
@@ -51,7 +56,8 @@ export default function Title() {
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? 'nav-link-active' : 'nav-link')}
-          to="/about"
+          to="/"
+          onClick={handleSubscribeClick}
         >
           Subscribe
         </NavLink>
@@ -77,12 +83,71 @@ export default function Title() {
             About
           </NavLink>
           <NavLink
-            onClick={handleClick}
+            onClick={handleSubscribeClick}
             className={({ isActive }) => (isActive ? 'nav-link-active' : 'nav-link')}
-            to="/about"
+            to="/"
           >
             Subscribe
           </NavLink>
+        </div>
+      )}
+
+      {/* subscribe modal */}
+      {showSubscribe && (
+        <div className="absolute w-full md:w-1/2 max-h-[600px] z-20 top-0 md:top-20 left-0 md:left-1/4 border-2 border-black bg-white">
+          <div className="h-12 w-full text-white bg-black flex flex-row justify-between px-6 py-2 items-center">
+            <h1 className="font-semibold text-lg">Subscribe</h1>
+            <button label="close" type="button" onClick={handleSubscribeClick}>
+              <div id="close" className="grid place-items-center pr-6 relative">
+                <span className="w-6 h-[3px] bg-white rounded rotate-45 absolute bottom-0 left-0" />
+                <span className="w-6 h-[3px] bg-white rounded -rotate-45 absolute bottom-0 left-0" />
+              </div>
+            </button>
+          </div>
+          <form className="flex flex-col items-start w-4/5 mx-auto gap-10 mt-10 mb-16">
+            <label htmlFor="username" className="font-semibold min-w-full">
+              Username:
+              <input
+                id="username"
+                type="text"
+                placeholder="ilovesfpopos"
+                className="border-gray-300 border w-full rounded p-2 mt-4 font-normal"
+              />
+            </label>
+            <label htmlFor="email" className="font-semibold min-w-full">
+              Email:
+              <input
+                id="email"
+                type="text"
+                placeholder="love@sfpopos.com"
+                className="border-gray-300 border w-full rounded p-2 mt-4 font-normal"
+              />
+            </label>
+            <label
+              htmlFor="subscribe"
+              className="font-semibold min-w-full flex flex-row items-center text-left justify-items-start mt-4"
+            >
+              <input
+                id="subscribe"
+                type="checkbox"
+                placeholder="love@sfpopos.com"
+                className="border-gray-300 border rounded p-2 w-fit mr-4"
+              />
+              Subscribe to newsletter
+            </label>
+            <div className="flex flex-row justify-between min-w-full gap-6">
+              <button
+                type="button"
+                onClick={handleSubscribeClick}
+                className="flex-1 bg-gray-100 p-2 rounded"
+              >
+                Cancel
+              </button>
+              <button type="submit" className="flex-1 bg-black text-white font-bold p-2 rounded">
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       )}
     </div>
